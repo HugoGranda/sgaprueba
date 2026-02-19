@@ -24,11 +24,11 @@ php artisan key:generate
 php artisan migrate
 npm run dev
 php artisan serve
-
-##API Base
+```
+## API Base
 /api/v1
 
-🛠 Stack
+## 🛠 Stack
 
 Laravel 12
 
@@ -38,7 +38,7 @@ MySQL
 
 Vite
 
-📌 Autor
+## 📌 Autor
 
 Hugo Granda
 
@@ -48,3 +48,5 @@ Luego:
 git add README.md
 git commit -m "Add professional README"
 git push
+
+```
