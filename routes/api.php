@@ -1,10 +1,8 @@
 <?php
     use Illuminate\Support\Facades\Route;
 
-    Route::prefix('v1')->group(function () {
-        Route::get('/test', function () {
-            return response()->json([
-                'message' => 'API funcionando correctamente'
-            ]);
-        });
+    Route::prefix("v1")->group(function(){
+        require base_path('routes/api_v1.php');
     });
+
+    
