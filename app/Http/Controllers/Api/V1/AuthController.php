@@ -20,14 +20,24 @@ class AuthController extends BaseController
     
     public function login(LoginRequest $request){
 
-        $dto = $request->toDTO();
+        try {
+            //code...
+        
+            $dto = $request->toDTO();
 
-        $authData = $this->authService->login($dto);
+            $authData = $this->authService->login($dto);
 
-        return $this->sendResponse(
-            new AuthResource($authData),
-            'Login successful'
-        );
+            return $this->sendResponse(
+                new AuthResource($authData),
+                'Login successful'
+            );
+        } catch (\Exception $e) {
+            return $this->sendError(
+                $e->getMessage(),
+                [],
+                401
+            );
+        }
 
     }
 }

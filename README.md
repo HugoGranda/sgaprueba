@@ -118,3 +118,11 @@ Sanctum es el sistema de autenticación API oficial de Laravel.
     # Luego ejecutar:
     php artisan migrate
 ```
+
+# Estructura
+
+Controller = orquestador
+Service = lógica
+DTO = transporte de datos
+Model = acceso a datos
+Resource = respuesta API
