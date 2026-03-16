@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Controllers\Api\BaseController;
-use App\Services\AuthService;
 use App\Http\Resources\AuthResource;
+use App\Services\AuthService;
+use App\Http\Controllers\Api\BaseController;
+
 
 class AuthController extends BaseController
 {
@@ -21,11 +22,10 @@ class AuthController extends BaseController
     public function login(LoginRequest $request){
 
         try {
-            //code...
         
             $dto = $request->toDTO();
 
-            $authData = $this->authService->login($dto);
+            $authData = $this->authService->loginApi($dto);
 
             return $this->sendResponse(
                 new AuthResource($authData),

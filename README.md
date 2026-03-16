@@ -126,3 +126,43 @@ Service = lógica
 DTO = transporte de datos
 Model = acceso a datos
 Resource = respuesta API
+
+# Filament
+```bash
+    composer require filament/filament
+    #Si sale error posiblemente sea porque no tienes habilitado la extension zip
+        #-- ejecutar php --ini
+        #-- ir a ese archivo
+        #-- y quita el ; : y quita el ;:
+
+    php artisan filament:install
+
+    #Esto instala:
+
+        # /app/Providers/Filament
+        # /config/filament.php
+
+
+    #Crear el Panel de Filament
+    php artisan make:filament-panel admin
+        #Verificar que tenga ->default() en app/Providers/Filament/AdminPanelProvider.php
+
+    #Limpiar cache
+    php artisan optimize:clear
+```
+# Crear usuario administrador
+```bash
+    php artisan make:filament-user
+```
+
+# Crear el Login personalizado correctamente
+```bash
+    php artisan make:filament-page Login #App\Filament\Pages\Auth\Login
+    #Reemplazar el Login base de Filament
+```
+
+# limpia cache
+
+```bash
+    php artisan optimize:clear
+```

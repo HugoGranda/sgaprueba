@@ -51,4 +51,11 @@ class User extends Authenticatable
     {
         return $this->hasOne(Person::class);
     }
+
+    public static function findForLogin($login)
+    {
+        return self::where('email', $login)
+            ->orWhere('username', $login)
+            ->first();
+    }
 }
