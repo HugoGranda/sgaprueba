@@ -121,11 +121,28 @@ Sanctum es el sistema de autenticación API oficial de Laravel.
 
 # Estructura
 
-Controller = orquestador
-Service = lógica
-DTO = transporte de datos
-Model = acceso a datos
-Resource = respuesta API
+    Service Layer Architecture con DTO o también Laravel Clean Service Architecture
+
+    El flujo:
+    Request → Controller → Service → DTO → Model → Resource
+
+    es básicamente una combinación de:
+
+    Service Layer Pattern
+
+    DTO Pattern
+
+    Clean Architecture aplicada a Laravel
+
+    Muchos equipos simplemente lo llaman:
+
+    Service Layer Architecture
+
+    Controller = orquestador
+    Service = lógica
+    DTO = transporte de datos
+    Model = acceso a datos
+    Resource = respuesta API
 
 # Filament
 ```bash
