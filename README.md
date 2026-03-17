@@ -150,7 +150,8 @@ Sanctum es el sistema de autenticación API oficial de Laravel.
     #Si sale error posiblemente sea porque no tienes habilitado la extension zip
         #-- ejecutar php --ini
         #-- ir a ese archivo
-        #-- y quita el ; : y quita el ;:
+        #-- y quita el ; : en extension=zip
+        # reinicia laragon
 
     php artisan filament:install
 
@@ -183,3 +184,5 @@ Sanctum es el sistema de autenticación API oficial de Laravel.
 ```bash
     php artisan optimize:clear
 ```
+
+php artisan vendor:publish --tag=filament-panels-views
