@@ -146,14 +146,14 @@ Sanctum es el sistema de autenticación API oficial de Laravel.
 
 # Filament
 ```bash
-    composer require filament/filament
+    composer require filament/filament:^4.2 --with-all-dependencies
     #Si sale error posiblemente sea porque no tienes habilitado la extension zip
         #-- ejecutar php --ini
         #-- ir a ese archivo
         #-- y quita el ; : en extension=zip
         # reinicia laragon
 
-    php artisan filament:install
+     php artisan filament:install --panels
 
     #Esto instala:
 

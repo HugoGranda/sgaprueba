@@ -18,6 +18,10 @@ class Login extends FilamentLogin
 {
     
     //protected string $view = 'filament.pages.auth.login'; 
+    public function getView(): string
+    {
+        return 'filament.pages.auth.login';
+    }
     public function authenticate(): ?LoginResponse
     {
         try {
