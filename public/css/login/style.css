@@ -20,8 +20,14 @@
   --font-bold: 700;
 }
 
+html.fi{
+  width: 100dvw;
+  height: 100dvh;
+}
+
 /* === BASE === */
 ::-webkit-scrollbar {
+  display: none;
   width: 0.6rem;
   background-color: var(--black-color);
 }
@@ -92,10 +98,16 @@ input[data-autocompleted] {
 
 /* === MAIN === */
 .main {
-  width: 100%;
+  width: 100dvw;
+  height: 100dvh;
   z-index: 100;
   min-height: 100vh;
   overflow: hidden;
+  overflow-y: scroll;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* === LOGIN === */

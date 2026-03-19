@@ -37,7 +37,9 @@ class Login extends FilamentLogin
 
             Auth::login($user);
 
-            return app(LoginResponse::class);
+            //return app(LoginResponse::class);
+            redirect()->to(route('filament.admin.pages.menu-principal'));
+            return null;
 
         } catch (\Exception $e) {
 

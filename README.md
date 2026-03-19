@@ -218,4 +218,22 @@ EN composer.json eliminar "@php artisan filament:upgrade"
     php artisan optimize:clear
 ```
 
-php artisan vendor:publish --tag=filament-panels-views
+php artisan vendor:publish --tag=filament-panels-views #posiblemente
+
+# Crear Nueva Página
+```bash
+    php artisan make:filament-page MenuPrincipal
+    #En AdminPanelProvider
+        ->pages([
+            \App\Filament\Pages\MenuPrincipal::class,
+        ])
+
+    app/Filament/Pages/MenuPrincipal.php #editar
+    # Cambiar vista
+    public function getView(): string
+    {
+        return 'filament.pages.dashboard';
+    }
+
+    resources/views/filament/pages/dashboard.blade.php # Crear Blade
+```

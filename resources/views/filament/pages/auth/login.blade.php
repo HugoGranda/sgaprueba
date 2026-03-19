@@ -78,7 +78,6 @@
         </section>
 
         <footer class="footer">Creado por Ismac ❤️</footer>
-
     </main>
 
     <section class="background" id="particles-js" wire:ignore></section>
