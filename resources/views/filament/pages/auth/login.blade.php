@@ -81,7 +81,7 @@
 
     </main>
 
-    <section class="background" id="particles-js"></section>
+    <section class="background" id="particles-js" wire:ignore></section>
 </div>
 {{-- JS --}}
 @push('scripts')

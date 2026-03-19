@@ -145,8 +145,40 @@ Sanctum es el sistema de autenticación API oficial de Laravel.
     Resource = respuesta API
 
 # Filament
+# --Reinicio
 ```bash
     composer remove filament/filament filament/* #eliminar filament
+```
+2️⃣ BORRA MANUAL
+    carpeta vendor/
+    archivo composer.lock
+```bash
+    composer clear-cache #limpiar cache
+    composer install
+```
+EN composer.json eliminar "@php artisan filament:upgrade"
+```json
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan filament:upgrade"
+        ]
+    }
+```
+4️⃣ INSTALA FORZANDO VERSIÓN
+```bash
+    composer require filament/filament:"^4.2" --with-all-dependencies
+```
+5️⃣ VERIFICA (ANTES DE SEGUIR)
+```bash
+    composer show filament/filament
+```
+5️⃣ RECIÉN AHÍ
+```bash
+    php artisan filament:install --panels
+```
+# --Instalación
+```bash
+    
     composer require filament/filament:^4.2 --with-all-dependencies
     #Si sale error posiblemente sea porque no tienes habilitado la extension zip
         #-- ejecutar php --ini
