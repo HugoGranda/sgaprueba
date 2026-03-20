@@ -1,43 +1,26 @@
-{{-- CSS --}}
-@push('styles')
-    <link rel="stylesheet" href="{{ assets('css/mainPage/normalize.css') }}" />
-    
-@endpush
 
-{{--  
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dante SGA - Home</title>
-		<!-- NORMALIZE CSS -->
-		<link rel="stylesheet" href="<?= base_url('assets/librerias/cssNew/mainPage/normalize.css') ?>" />
-		<!-- FAVICON -->
+	{{-- FAVICON --}}
 		<link
 			rel="shortcut icon"
-			href="<?= base_url('assets/librerias/imagesNew/mainPage/icon.png') ?>"
+			href="{{ asset('images/mainPage/icon.png') }}"
 			type="image/x-icon"
 		/>
-		<!-- REMIX ICON -->
-		<link
-			href="<?= base_url('assets/librerias/cssNew/mainPage/remixicon/remixicon.css') ?>"
-			rel="stylesheet"
-		/>
-		<!-- SWIPER CSS -->
-		<link
-			rel="stylesheet"
-			href="<?= base_url('assets/librerias/cssNew/mainPage/swiper-bundle.min.css') ?>"
-		/>
-		<!-- CUSTOM CSS -->
-		<link rel="stylesheet" href="<?= base_url('assets/librerias/cssNew/mainPage/style.css') ?>" />
-	</head>
-	<body>
-		<!-- === HEADER === -->
+	{{-- CSS --}}
+	@push('styles')
+		{{-- NORMALIZE --}}
+			<link rel="stylesheet" href="{{ asset('css/mainPage/normalize.css') }}" />
+		{{-- REMIX ICON --}}
+			<link href="{{ asset('css/mainPage/remixicon/remixicon.css') }}" rel="stylesheet" />
+		{{-- SWIPER CSS --}}
+			<link rel="stylesheet" href="{{ asset('css/mainPage/swiper-bundle.min.css') }}" />
+		{{-- CUSTOM CSS --}}
+			<link rel="stylesheet" href="{{ asset('css/mainPage/style.css') }}" />
+	@endpush
+	<!-- === HEADER === -->
 		<header class="header" id="header">
 			<div class="nav container">
 				<figure class="nav__logo">
-					<img src="<?= base_url('assets/librerias/imagesNew/mainPage/logo.png') ?>" alt="Logo" class="nav__img" />
+					<img src="{{ asset('images/mainPage/logo.png') }}" alt="Logo" class="nav__img" />
 				</figure>
 
 				<div class="nav__menu" id="nav-menu">
@@ -87,6 +70,10 @@
 				</div>
 			</div>
 		</header>
+
+{{--  
+	<body>
+		
 		<!-- === MAIN === -->
 		<main class="main">
 			<!-- === HOME === -->
