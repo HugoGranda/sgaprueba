@@ -7,16 +7,16 @@ use Livewire\Attributes\On;
 
 class MenuPrincipal extends Page
 {
-    protected string $view = 'filament.pages.menu-principal';
+    public string $view = 'filament.pages.menu-principal';
     /*public function getLayout(): string
     {
         return 'layouts.menu-principal';
     }*/
     
-    #[On('accesoBloque')]
+    //#[On('accesoBloque')]
     public function accesoBloque($idBloque)
     {
-        dd($idBloque);
+        //dd($idBloque);
         // Guardas en sesión
         session([
             'id_bloque' => $idBloque

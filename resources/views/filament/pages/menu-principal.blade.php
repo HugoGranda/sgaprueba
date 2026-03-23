@@ -1,6 +1,4 @@
 @push('styles')
-	
-
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Menú Principal</title>	
@@ -19,6 +17,11 @@
 				<link rel="stylesheet" href="{{ asset('css/mainPage/swiper-bundle.min.css') }}" />
 			{{-- CUSTOM CSS --}}
 				<link rel="stylesheet" href="{{ asset('css/mainPage/style.css') }}" />
+				<style>
+					.fi-sidebar { display: none !important; }
+					.fi-topbar { display: none !important; }
+					.fi-main { padding: 0 !important; }
+				</style>
 @endpush
 <div>
 		{{-- HEADER --}}
@@ -102,7 +105,7 @@
 
 							<div class="home__gestion swiper" >
 							<div class="swiper-wrapper">
-								<figure class="home__figure swiper-slide" onclick="Livewire.find(document.querySelector('[wire\\:id]').getAttribute('wire:id')).call('accesoBloque', 1)">
+								<figure class="home__figure swiper-slide" wire:click="accesoBloque(1)">
 								<img
 									src="{{ asset('images/mainPage/academicaImg1.jpg') }}"
 									alt="Tecnicatura"
@@ -251,8 +254,6 @@
 		</main>
 </div>
 @push('scripts')
-	
-
 		{{-- SWIPER JS --}}
 			<script src="{{ asset('js/mainPage/swiper-bundle.min.js') }}"></script>
 		{{-- MAIN --}}
