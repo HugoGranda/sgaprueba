@@ -6,8 +6,9 @@ use Filament\Pages\Page;
 
 class MenuModulos extends Page
 {
-    public function getLayout(): string
+    /* public function getLayout(): string
     {
         return 'layouts.menu-modulos';
-    }
+    } */
+    public string $view = 'filament.pages.menu-modulos';
 }
