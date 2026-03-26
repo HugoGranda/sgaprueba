@@ -25,15 +25,14 @@
 }
 
 /* === BASE === */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.6rem;
-  background-color: var(--black-color);
 }
 
 ::-webkit-scrollbar-thumb {
   width: 0.6rem;
-  background-color: var(--black-color);
-}
+
+} */
 
 body {
   font-family: var(--body-font);
@@ -65,6 +64,7 @@ img {
 
 .main {
   overflow: hidden;
+  width: 100vw;
 }
 
 /* === HEADER / NAV === */

@@ -17,7 +17,8 @@
             {{-- CUSTOM CSS --}}
 				<link rel="stylesheet" href="{{ asset('css/modulePage/style.css') }}" />
             <style>
-                .fi-sidebar { display: none !important; }
+               /* .fi-sidebar { display: none !important; }*/
+                .fi-sidebar { opacity: 0; z-index: -9999; }
                 .fi-topbar { display: none !important; }
                 .fi-main { padding: 0 !important; }
             </style>
@@ -83,7 +84,7 @@
                                 <div class="card__picture">
                                     <img
                                         src="{{ asset('images/iconos_modulos/'.$modulo['ICONO']) }}"
-                                        alt="<?= $modulo['MODULO']; ?>"
+                                        alt="<?= $modulo['NOMBRE_MODULO']; ?>"
                                         class="card__img"
                                     />
                                     <figcaption class="card__title">{{ $modulo['NOMBRE_MODULO'] }}</figcaption>
@@ -97,6 +98,8 @@
 </main>
 
 @push('scripts')
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
     <!-- === CUSTOM JS === -->
 	<script src="{{ asset('js/modulePage/main.js') }}"></script>
 @endpush

@@ -12,10 +12,13 @@ API REST profesional construida con Laravel 12.
 ## 📦 Instalación
 
 ```bash
+
 git clone https://github.com/HugoGranda/sgaprueba.git
 cd sgaprueba-api
 composer install
 npm install
+composer create-project laravel/laravel dante-sga
+composer require filament/filament  --with-all-dependencies
 cp .env.example .env
 php artisan key:generate
 
