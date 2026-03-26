@@ -18,7 +18,7 @@ cd sgaprueba-api
 composer install
 npm install
 composer create-project laravel/laravel dante-sga
-composer require filament/filament  --with-all-dependencies
+composer require filament/filament  --with-all-dependencies #using 5.4
 cp .env.example .env
 php artisan key:generate
 
