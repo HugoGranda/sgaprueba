@@ -19,8 +19,7 @@ composer install
 npm install
 composer create-project laravel/laravel dante-sga
 composer require filament/filament  --with-all-dependencies #using 5.4
-cp .env.example .env
-php artisan key:generate
+php artisan key:generate #solo una vez por proyecto
 
 ## Configurar base de datos en .env
 
@@ -106,8 +105,8 @@ Sanctum es el sistema de autenticación API oficial de Laravel.
     composer require laravel/sanctum
     php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
     php artisan migrate #Esto crea la tabla: personal_access_tokens
-    php artisan make:request LoginRequest # Crear LoginRequest
-    php artisan make:controller Api/V1/AuthController #Crear AuthController
+    
+    
 ```
 
 # Agregar una columna a una tabla
@@ -200,6 +199,10 @@ EN composer.json eliminar "@php artisan filament:upgrade"
     #Crear el Panel de Filament
     php artisan make:filament-panel admin
         #Verificar que tenga ->default() en app/Providers/Filament/AdminPanelProvider.php
+
+    php artisan make:controller Api/V1/AuthController #Crear AuthController
+    php artisan make:request LoginRequest # Crear LoginRequest
+    #creación de rutas api y api_v1
 
     #Limpiar cache
     php artisan optimize:clear
